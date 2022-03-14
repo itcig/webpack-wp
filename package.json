@@ -1,6 +1,6 @@
 {
 	"name": "@itcig/webpack-wp",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"license": "MIT",
 	"description": "Common tools to facilitate front-end development and testing for WordPress (plugins & themes). Includes WebPack 5, BrowserSync, PostCSS/Autoprefixer, PurgeCSS, BabelJS, Eslint, Stylelint, SCSS processor, WP-Pot, an organized file structure and more.",
 	"author": {
@@ -21,7 +21,7 @@
 		"access": "public"
 	},
 	"scripts": {},
-	"devDependencies": {
+	"dependencies": {
 		"@itcig/babel-preset": "^1.1.14",
 		"@itcig/browserslist-config": "^1.1.9",
 		"@itcig/eslint-config-cig": "^1.5.2",
