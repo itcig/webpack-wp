@@ -1,0 +1,19 @@
+.DS_Store
+.env
+.github/
+.vscode/
+test/
+src/
+composer.json
+config/local.js
+*creds.json
+example*
+tsconfig*.json
+yarn-error.log
+yarn.lock
+
+# Junk
+**/old/
+**/OLD/
+*.OLD
+**/__wip__/

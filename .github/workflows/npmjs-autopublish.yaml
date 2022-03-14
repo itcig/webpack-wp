@@ -1,0 +1,33 @@
+name: NPM Package Auto-publisher
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  publish:
+    name: Publish
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check that the secret is set
+        env:
+          TOKEN: ${{ secrets.API_TOKEN_GITHUB }}
+        run: |
+          if [[ -z "$TOKEN" ]]; then
+            echo '::error::The secret API_TOKEN_GITHUB must be set.'
+            exit 1
+          fi
+
+      - uses: actions/checkout@v2
+
+      - uses: actions/setup-node@v2
+        with:
+          always-auth: true
+          registry-url: https://npm.pkg.github.com
+          scope: '@itcig'
+
+      - name: Publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.API_TOKEN_GITHUB }}
+        run: yarn publish
