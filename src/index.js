@@ -102,7 +102,12 @@ const projectFiles = {
         [
           'svgo',
           {
-            plugins: [{ removeViewBox: false }],
+            plugins: [
+              {
+                name: 'removeViewBox',
+                enabled: false,
+              },
+            ],
           },
         ],
       ],
