@@ -4,16 +4,30 @@
  * @since 1.0.0
  */
 const path = require('path');
+const fs = require('fs');
 
 // Paths to find our files and provide BrowserSync functionality.
 const projectPaths = {
   projectDir: __dirname, // Current project directory absolute path.
-  projectJsPath: path.resolve(__dirname, 'resources/assets/scripts'),
-  projectScssPath: path.resolve(__dirname, 'resources/assets/styles'),
-  projectImagesPath: path.resolve(__dirname, 'resources/assets/images'),
   projectOutput: path.resolve(__dirname, 'dist'),
   projectWebpack: path.resolve(__dirname, 'webpack'),
 };
+
+if (fs.existsSync(path.resolve(__dirname, 'assets/scripts'))) {
+  projectPaths.projectJsPath = path.resolve(__dirname, 'assets/scripts');
+}
+
+if (fs.existsSync(path.resolve(__dirname, 'assets/styles'))) {
+  projectPaths.projectScssPath = path.resolve(__dirname, 'assets/styles');
+}
+
+if (fs.existsSync(path.resolve(__dirname, 'assets/images'))) {
+  projectPaths.projectImagesPath = path.resolve(__dirname, 'assets/images');
+}
+
+if (fs.existsSync(path.resolve(__dirname, 'assets/fonts'))) {
+  projectPaths.projectFontsPath = path.resolve(__dirname, 'assets/fonts');
+}
 
 // Files to bundle
 const projectFiles = {
@@ -111,6 +125,20 @@ const projectFiles = {
           },
         ],
       ],
+    },
+  },
+  // Fonts configurations for development and production
+  projectFonts: {
+    rules: {
+      test: /\.(ttf|eot|woff|woff2|svg)$/,
+      use: {
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]',
+          outputPath: 'fonts/',
+          esModule: false,
+        },
+      },
     },
   },
 };

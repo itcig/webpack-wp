@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.0](https://github.com/itcig/itcig/compare/@itcig/webpack-wp@1.1.5...@itcig/webpack-wp@1.2.0) (2022-03-30)
+
+
+### Features
+
+* **webpack-wp:** resolve URLs and files in Webpack ([#21](https://github.com/itcig/itcig/issues/21)) ([3b256ff](https://github.com/itcig/itcig/commit/3b256ffd00c0c2df3605b41be38407e1b4179dce))
+
+
+
 ### [1.1.5](https://github.com/itcig/itcig/compare/@itcig/webpack-wp@1.1.4...@itcig/webpack-wp@1.1.5) (2022-03-28)
 
 

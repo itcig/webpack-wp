@@ -30,6 +30,9 @@ module.exports = (projectOptions) => {
         // eslint-disable-next-line global-require
         options: require(projectOptions.projectCss.postCss)(projectOptions),
       },
+      {
+        loader: 'resolve-url-loader',
+      },
     ],
   };
 
@@ -39,6 +42,7 @@ module.exports = (projectOptions) => {
       // Compiles Sass to CSS
       loader: 'sass-loader',
       options: {
+        sourceMap: true,
         sassOptions: { importer: magicImporter() }, // add magic import functionalities to sass
       },
     });
@@ -59,6 +63,18 @@ module.exports = (projectOptions) => {
    */
   const imageRules = {
     test: projectOptions.projectImages.rules.test,
+    use: [
+      {
+        loader: 'file-loader', // Or `url-loader` or your other loader
+      },
+    ],
+  };
+
+  /**
+   * Font rules
+   */
+  const fontRules = {
+    test: projectOptions.projectFonts.rules.test,
     use: [
       {
         loader: 'file-loader', // Or `url-loader` or your other loader
@@ -116,6 +132,7 @@ module.exports = (projectOptions) => {
     cssRules,
     jsRules,
     imageRules,
+    fontRules,
     optimizations,
     plugins,
   };
