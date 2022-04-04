@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [1.2.1](https://github.com/itcig/itcig/compare/@itcig/webpack-wp@1.2.0...@itcig/webpack-wp@1.2.1) (2022-04-04)
+
+
+### Bug Fixes
+
+* **webpack-wp:** font loader config ([#22](https://github.com/itcig/itcig/issues/22)) ([663551c](https://github.com/itcig/itcig/commit/663551c2d8bc1dec078d89b7a7f3add086ae6988))
+
+
+
 ## [1.2.0](https://github.com/itcig/itcig/compare/@itcig/webpack-wp@1.1.5...@itcig/webpack-wp@1.2.0) (2022-03-30)
 
 

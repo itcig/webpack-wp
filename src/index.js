@@ -130,15 +130,12 @@ const projectFiles = {
   // Fonts configurations for development and production
   projectFonts: {
     rules: {
-      test: /\.(ttf|eot|woff|woff2|svg)$/,
-      use: {
-        loader: 'file-loader',
-        options: {
-          name: '[name].[ext]',
-          outputPath: 'fonts/',
-          esModule: false,
-        },
-      },
+      test: /\.(ttf|eot|woff|woff2|svg)$/i,
+    },
+    loaderOptions: {
+      name: '[name].[ext]',
+      outputPath: 'fonts/',
+      esModule: false,
     },
   },
 };

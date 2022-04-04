@@ -52,7 +52,7 @@ module.exports = (projectOptions) => {
    * Font rules
    */
   const fontRules = {
-    ...Base.imageRules,
+    ...Base.fontRules,
     ...{
       // add font rules for development here
     },

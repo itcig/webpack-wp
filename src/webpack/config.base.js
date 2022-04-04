@@ -32,6 +32,9 @@ module.exports = (projectOptions) => {
       },
       {
         loader: 'resolve-url-loader',
+        options: {
+          sourceMap: true,
+        },
       },
     ],
   };
@@ -66,18 +69,23 @@ module.exports = (projectOptions) => {
     use: [
       {
         loader: 'file-loader', // Or `url-loader` or your other loader
+        // options: {
+        //   publicPath: '../images/',
+        //   outputPath: '../dist/images/',
+        //   name: '[name].[ext]?[hash]',
+        // },
       },
     ],
   };
 
-  /**
-   * Font rules
-   */
   const fontRules = {
     test: projectOptions.projectFonts.rules.test,
     use: [
       {
-        loader: 'file-loader', // Or `url-loader` or your other loader
+        loader: 'file-loader',
+        options: {
+          ...projectOptions.projectFonts.loaderOptions,
+        },
       },
     ],
   };
