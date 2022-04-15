@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [1.2.3](https://github.com/itcig/itcig/compare/@itcig/webpack-wp@1.2.2...@itcig/webpack-wp@1.2.3) (2022-04-15)
+
+
+### Bug Fixes
+
+* **webpack-wp:** remove purgecss ([#26](https://github.com/itcig/itcig/issues/26)) ([cb65bfa](https://github.com/itcig/itcig/commit/cb65bfa172742045840a40fb6d050e3eec151ab2))
+
+
+
 ### [1.2.2](https://github.com/itcig/itcig/compare/@itcig/webpack-wp@1.2.1...@itcig/webpack-wp@1.2.2) (2022-04-15)
 
 **Note:** Version bump only for package @itcig/webpack-wp
