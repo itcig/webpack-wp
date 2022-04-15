@@ -5,9 +5,6 @@
  *
  * @since 1.0.0
  */
-const glob = require('glob-all');
-const PurgecssPlugin = require('purgecss-webpack-plugin'); // A tool to remove unused CSS
-
 module.exports = (projectOptions) => {
   process.env.NODE_ENV = 'production'; // Set environment level to 'production'
 
@@ -63,17 +60,6 @@ module.exports = (projectOptions) => {
   const optimizations = {
     ...Base.optimizations,
     ...{
-      splitChunks: {
-        cacheGroups: {
-          styles: {
-            // Configured for PurgeCSS
-            name: 'styles',
-            test: /\.css$/,
-            chunks: 'all',
-            enforce: true,
-          },
-        },
-      },
       // add optimizations rules for production here
     },
   };
@@ -84,10 +70,6 @@ module.exports = (projectOptions) => {
   const plugins = [
     ...Base.plugins,
     ...[
-      new PurgecssPlugin({
-        // Scans files and removes unused CSS
-        paths: glob.sync(projectOptions.projectCss.purgeCss.paths, { nodir: true }),
-      }),
       // add plugins for production here
     ],
   ];

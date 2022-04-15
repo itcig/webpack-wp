@@ -74,17 +74,13 @@ module.exports = (projectOptions) => {
   const plugins = [
     ...Base.plugins,
     ...[
+      // Add eslint to plugins if enabled
+      ...(projectOptions.projectJs.eslint === true ? [new ESLintPlugin()] : []),
+      // Add stylelint to plugins if enabled
+      ...(projectOptions.projectCss.stylelint === true ? [new StylelintPlugin()] : []),
       // add plugins for development here
     ],
   ];
-  // Add eslint to plugins if enabled
-  if (projectOptions.projectJs.eslint === true) {
-    plugins.push(new ESLintPlugin());
-  }
-  // Add stylelint to plugins if enabled
-  if (projectOptions.projectJs.eslint === true) {
-    plugins.push(new StylelintPlugin());
-  }
 
   /** *
    * Add sourcemap for development if enabled

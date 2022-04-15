@@ -79,17 +79,6 @@ const projectFiles = {
         test: /\.pcss$/i,
       },
     },
-    purgeCss: {
-      // PurgeCSS is only being activated in production environment
-      paths: [
-        // Specify content that should be analyzed by PurgeCSS
-        `${__dirname}/resources/assets/scripts/**/*`,
-        `${__dirname}/templates/**/**/*`,
-        `${__dirname}/template-parts/**/**/*`,
-        `${__dirname}/blocks/**/**/*`,
-        `${__dirname}/*.php`,
-      ],
-    },
   },
   // Source Maps configurations
   projectSourceMaps: {
