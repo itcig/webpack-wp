@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [1.2.2](https://github.com/itcig/itcig/compare/@itcig/webpack-wp@1.2.1...@itcig/webpack-wp@1.2.2) (2022-04-15)
+
+**Note:** Version bump only for package @itcig/webpack-wp
+
+
+
+
+
 ### [1.2.1](https://github.com/itcig/itcig/compare/@itcig/webpack-wp@1.2.0...@itcig/webpack-wp@1.2.1) (2022-04-04)
 
 

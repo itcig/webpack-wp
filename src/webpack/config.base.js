@@ -28,7 +28,7 @@ module.exports = (projectOptions) => {
         // loads the PostCSS loader
         loader: 'postcss-loader',
         // eslint-disable-next-line global-require
-        options: require(projectOptions.projectCss.postCss)(projectOptions),
+        options: require(projectOptions.projectCss.postCss)(projectOptions.projectCss.postCssOptions || {}),
       },
       {
         loader: 'resolve-url-loader',

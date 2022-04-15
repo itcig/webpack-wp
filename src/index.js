@@ -61,6 +61,10 @@ const projectFiles = {
   // CSS configurations for development and production
   projectCss: {
     postCss: `${projectPaths.projectDir}/postcss/postcss.config.js`,
+    // Send in postcss config options to enable or disable postcss plugins
+    // postCssOptions: {
+    //   prefix: '',
+    // },
     stylelint: true, // enable or disable stylelint | this is only enabled in development env.
     filename: 'css/[name].css',
     use: 'sass', // sass || postcss
