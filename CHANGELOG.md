@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [1.2.4](https://github.com/itcig/itcig/compare/@itcig/webpack-wp@1.2.3...@itcig/webpack-wp@1.2.4) (2022-04-18)
+
+
+### Bug Fixes
+
+* **webpack-wp:** bad postcss option structure ([1df4226](https://github.com/itcig/itcig/commit/1df4226a9c8eb035feb083ce2915520cf37eb0f4))
+
+
+
 ### [1.2.3](https://github.com/itcig/itcig/compare/@itcig/webpack-wp@1.2.2...@itcig/webpack-wp@1.2.3) (2022-04-15)
 
 

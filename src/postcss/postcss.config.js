@@ -30,12 +30,14 @@ module.exports = (postcssOptions) => {
 
   // If we use Sass+PostCSS then we only need the autoprefixer
   return {
-    plugins: [
-      // To parse CSS and add vendor prefixes to CSS rules using values from Can I Use.
-      // https://github.com/postcss/autoprefixer
-      autoprefixer,
-      ...[postCssPrefixer],
-      ...(postcssOptions.plugins || []),
-    ],
+    postcssOptions: {
+      plugins: [
+        // To parse CSS and add vendor prefixes to CSS rules using values from Can I Use.
+        // https://github.com/postcss/autoprefixer
+        autoprefixer,
+        ...[postCssPrefixer],
+        ...(postcssOptions.plugins || []),
+      ],
+    },
   };
 };
